@@ -33,6 +33,34 @@ public abstract class User {
         return book;
     }
 
+    protected boolean confirm(String act){
+        System.out.print(
+            "\n是否确定" + act + "？\n" +
+            "1.是\n" +
+            "2.否\n\n" +
+            "请选择："
+        );
+
+        Scanner scan = new Scanner(System.in);
+        if(!scan.hasNextInt()){
+            System.out.println("输入无效，已返回！");
+            return false;
+        }
+        int key = scan.nextInt();
+
+        if(key == 1){
+            return true;
+        }
+        else if(key == 2){
+            System.out.println("已取消" + act + "。");
+            return false;
+        }
+        else{
+            System.out.println("无效的数字，已返回！");
+            return false;
+        }
+    }
+
     public void show(){
         int page = 1;
         int count = bookshelf.getBooksCount();

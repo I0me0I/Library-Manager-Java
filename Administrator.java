@@ -80,48 +80,16 @@ public class Administrator extends User {
     }
 
     public void del(){
-        System.out.print(
-            "\n--- 删除图书 ---\n\n" +
-            "请输入图书的编号："
-        );
+        System.out.println("\n--- 删除图书 ---\n");
 
-        Scanner scan = new Scanner(System.in);
-        if(!scan.hasNextInt()){
-            System.out.println("输入无效，已返回！");
-            return;
-        }
-        Book book = bookshelf.findBook(scan.nextInt());
-
+        Book book = find();
         if(book == null){
-            System.out.println("没有此编号的书籍！");
             return;
         }
 
-        bookshelf.showColumns();
-        book.show();
-
-        System.out.print(
-            "\n是否确定删除？\n" +
-            "1.是\n" +
-            "2.否\n\n" +
-            "请选择："
-        );
-
-        if(!scan.hasNextInt()){
-            System.out.println("输入无效，已返回！");
-            return;
-        }
-        int key = scan.nextInt();
-
-        if(key == 1){
+        if(confirm("删除")){
             bookshelf.removeBook(book);
             System.out.println("删除成功！");
-        }
-        else if(key == 2){
-            System.out.println("已取消删除。");
-        }
-        else{
-            System.out.println("无效的数字，已返回！");
         }
     }
 
@@ -185,9 +153,9 @@ public class Administrator extends User {
                 return;
         }
 
-        System.out.println("修改完成！");
         bookshelf.showColumns();
         book.show();
+        System.out.println("\n修改完成！");
     }
 
 }

@@ -64,11 +64,15 @@ public class GeneralUser extends User{
             return;
         }
 
-        if(bookshelf.fetchBook(book)){
-            System.out.println("\n借阅成功！");
-        }
-        else{
-            System.out.println("\n没有库存，借阅失败！");
+        if(confirm("借阅")){
+            if(bookshelf.fetchBook(book)){
+                bookshelf.showColumns();
+                book.show();
+                System.out.println("\n借阅成功！");
+            }
+            else{
+                System.out.println("\n没有库存，借阅失败！");
+            }
         }
     }
 
@@ -80,6 +84,11 @@ public class GeneralUser extends User{
             return;
         }
 
-        bookshelf.putBook(book);
+        if(confirm("归还")){
+            bookshelf.showColumns();
+            book.show();
+            bookshelf.putBook(book);
+            System.out.println("\n归还成功！");
+        }
     }
 }
