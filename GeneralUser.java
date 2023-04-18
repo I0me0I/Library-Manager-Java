@@ -32,11 +32,11 @@ public class GeneralUser extends User{
                     break;
                 
                 case 3:
-                    
+                    borrowBook();
                     break;
                 
                 case 4:
-                    
+                    returnBook();
                     break;
                 
                 case 5:
