@@ -111,9 +111,9 @@
     报告.html               // 本文档的 html 版本
     报告.pdf                // 本文档的 pdf 版本
 
-其中`code`文件夹包含了本项目所有的Java源文件，`Main.java`文件中的`main()`方法为程序的入口点。
-项目报告使用 markdown 编写，为了便于老师阅读，已转换为 html 和 pdf 格式（即`报告.html`和`报告.pdf`），建议阅读 html 版本。
-下面的类图及功能框图使用 draw.io 编写，并转换为了 svg 格式
+其中`code`文件夹包含了本项目所有的Java源文件，`Main.java`文件中的`main()`方法为程序的入口点。  
+项目报告使用 markdown 编写，为了便于老师阅读，已转换为 html 和 pdf 格式（即`报告.html`和`报告.pdf`），建议阅读 html 版本。  
+下面的类图及功能框图使用 draw.io 编写，并转换为了 svg 格式  
 
 ##### 类图
 
