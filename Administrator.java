@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Administrator extends User {
 
+    /**
+     * 管理员的<菜单>界面
+     */
     public void menu(){
         while(true){
             System.out.print(
@@ -62,6 +65,9 @@ public class Administrator extends User {
         }
     }
 
+    /**
+     * <添加图书>界面
+     */
     public void add(){
         System.out.println(
             "\n--- 添加图书 ---\n" +
@@ -85,6 +91,9 @@ public class Administrator extends User {
         }
     }
 
+    /**
+     * <删除图书>界面
+     */
     public void del(){
         System.out.println("\n--- 删除图书 ---\n");
 
@@ -99,6 +108,9 @@ public class Administrator extends User {
         }
     }
 
+    /**
+     * <修改图书>界面
+     */
     public void mod(){
         System.out.println("\n--- 修改图书 ---\n");
 

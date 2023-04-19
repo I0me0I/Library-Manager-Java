@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * 主函数，<图书馆管理系统>的启动界面
+     * @param args 命令行参数（不使用）
+     */
     public static void main(String args[]){
         while(true){
             System.out.print(

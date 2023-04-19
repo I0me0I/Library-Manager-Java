@@ -7,11 +7,18 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public abstract class User {
-    protected Bookshelf bookshelf = new Bookshelf();
-    private final int ROWS_PER_PAGE = 10;
+    protected Bookshelf bookshelf = new Bookshelf(); // 用于保存 Book 对象
+    private final int ROWS_PER_PAGE = 10; // 每页显示的属性行数
 
+    /**
+     * 用户的<菜单>界面
+     */
     public abstract void menu();
     
+    /**
+     * 根据输入的 number 属性值查找指定的 Book 对象
+     * @return 如果找到，返回指定的 Book 对象，并显示其属性值，否则返回 null
+     */
     protected Book find(){
         System.out.print("请输入图书的编号：");
 
@@ -33,6 +40,11 @@ public abstract class User {
         return book;
     }
 
+    /**
+     * 根据输入，确定是否执行指定的动作
+     * @param act 要指定的动作
+     * @return 如果输入为 1，则返回 true，其他情况均返回 false
+     */
     protected boolean confirm(String act){
         System.out.print(
             "\n是否确定" + act + "？\n" +
@@ -61,6 +73,9 @@ public abstract class User {
         }
     }
 
+    /**
+     * <显示所有图书>界面
+     */
     public void show(){
         int page = 1;
         int count = bookshelf.getBooksCount();
@@ -116,6 +131,9 @@ public abstract class User {
         }
     }
 
+    /**
+     * <查找图书>界面
+     */
     public void query(){
         System.out.print(
             "\n--- 查找图书 ---\n\n"
@@ -187,6 +205,9 @@ public abstract class User {
         }
     }
 
+    /**
+     * <导入数据>界面
+     */
     public void importData(){
         System.out.print(
             "\n--- 导入数据 ---\n\n" +
@@ -213,6 +234,9 @@ public abstract class User {
         }
     }
 
+    /**
+     * <导出数据>界面
+     */
     public void exportData(){
         System.out.print(
             "\n--- 导出数据 ---\n\n" +

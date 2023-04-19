@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class GeneralUser extends User{
+    /**
+     * 普通用户的<菜单>界面
+     */
     public void menu(){
         while(true){
             System.out.print(
@@ -56,6 +59,9 @@ public class GeneralUser extends User{
         }
     }
 
+    /**
+     * <借阅图书>界面
+     */
     public void borrowBook(){
         System.out.println("\n--- 借阅图书 ---\n");
 
@@ -76,6 +82,9 @@ public class GeneralUser extends User{
         }
     }
 
+    /**
+     * <归还图书>界面
+     */
     public void returnBook(){
         System.out.println("\n--- 归还图书 ---\n");
 
