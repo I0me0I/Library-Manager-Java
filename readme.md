@@ -17,12 +17,12 @@
 ### 使用说明
 - - - - - - - - - - - -
 ##### 启动界面
-![图片](./bootmenu.png "启动界面")
+![图片](./img/bootmenu.png "启动界面")
 
 启动主程序（Main.java）后会看到上面的界面，输入数字，选择你想要进入的子系统。
 
 ##### 图书管理系统
-![图片](./bookman.png "图书管理系统")
+![图片](./img/bookman.png "图书管理系统")
 
 > 初始时图书列表为空，应当先**添加图书**或**导入数据**。
 1. 显示所有图书
@@ -41,7 +41,7 @@
 导出图书数据到文件。
 
 ##### 图书借阅系统
-![图片](./bookborrow.png "图书借阅系统")
+![图片](./img/bookborrow.png "图书借阅系统")
 
 > 初始时图书列表为空，必须先**导入数据**。借阅或归还图书后必须**导出数据**，否则所做的更改不会生效。
 1. 显示所有图书
@@ -65,16 +65,6 @@
 ### 项目介绍
 - - - - - - - - - - - -
 本项目共包含6个类，各类之间的关系如下图（部分属性和方法略）：
-![图片](./classdiagram.drawio "项目libman的类图")
+![图片](./img/classes.svg "项目libman的类图")
 完成各功能的方法之间的调用关系如图：
-![图片](./functions.drawio "项目libman的功能框图")
-各类主要包含的属性和方法：
-Book类
-```Java
-    private int number;
-    private String name;
-    private String author;
-    private String category;
-    private int count;
-    public boolean setAll();
-```
+![图片](./img/functions.svg "项目libman的功能框图")
