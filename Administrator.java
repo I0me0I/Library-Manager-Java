@@ -71,8 +71,14 @@ public class Administrator extends User {
         Book book = new Book();
 
         if(book.setAll()){
-            bookshelf.addBook(book);
-            System.out.println("添加成功！");
+            if(bookshelf.findBook(book.getNumber()) != null){
+                System.out.println("编号重复，添加失败！");
+            }
+            else{
+                bookshelf.addBook(book);
+                System.out.println("添加成功！");
+            }
+
         }
         else{
             System.out.println("添加失败！");
